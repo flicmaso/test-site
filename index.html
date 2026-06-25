@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mason's Test Site</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2.5rem;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { color: #aaa; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 5rem 2rem;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 70%);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.4);
+      color: #a5b4fc;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.75rem;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      max-width: 700px;
+      margin-bottom: 1.25rem;
+    }
+    h1 span {
+      background: linear-gradient(135deg, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: #888;
+      max-width: 520px;
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: 0.9; }
+    .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border: none; }
+    .btn-secondary { background: transparent; color: #ccc; border: 1px solid #333; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+    .card { background: #161616; border: 1px solid #222; border-radius: 12px; padding: 1.5rem; }
+    .card-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .card p  { font-size: 0.85rem; color: #777; line-height: 1.55; }
+    footer { text-align: center; padding: 1.5rem; border-top: 1px solid #1e1e1e; font-size: 0.8rem; color: #444; }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="logo">Mason</span>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <span class="badge">GitHub Pages - Live</span>
+    <h1>Build things that <span>actually work.</span></h1>
+    <p class="subtitle">This is a test landing page deployed on GitHub Pages. Fast, free, and live in minutes.</p>
+    <div class="cta-group">
+      <a href="#" class="btn btn-primary">Get Started</a>
+      <a href="https://github.com" class="btn btn-secondary">View on GitHub</a>
+    </div>
+  </section>
+  <section class="features">
+    <div class="card">
+      <div class="card-icon">&#9889;</div>
+      <h3>Instant Deploy</h3>
+      <p>Push to main and your site updates automatically. Zero config needed.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">&#128274;</div>
+      <h3>Free HTTPS</h3>
+      <p>GitHub Pages provides a free TLS certificate out of the box.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">&#127757;</div>
+      <h3>Global CDN</h3>
+      <p>Served from GitHub's global edge network for fast load times everywhere.</p>
+    </div>
+  </section>
+  <footer>Built with GitHub Pages &mdash; &copy; 2026 Mason</footer>
+</body>
+</html>
